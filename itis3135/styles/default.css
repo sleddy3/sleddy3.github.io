@@ -71,3 +71,78 @@ h3 {
     text-align: center;
     margin-bottom: 2%;
 }
+
+@media screen and (min-width: 370px) {
+    main {
+        margin: 10px;
+        padding-bottom: 1%;
+    }
+    ul {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    img {
+        max-width: 95%;  
+        height: auto;    
+        padding: 12px;    
+    }
+    div {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .list {
+        padding: 1%;
+    }
+    footer {
+        padding: 0.5%;
+    } 
+}
+
+@media screen and (min-width: 601px) {
+    main {
+        margin: 15px;
+        padding-bottom: 1%;
+    }
+    ul {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    img {
+        max-width: 95%;  
+        height: auto;    
+        padding: 12px;    
+    }
+    div {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .list {
+        padding: 1.5%;
+    }
+    footer {
+        padding: 0.75%;
+    }  
+}
+
+@media screen and (min-width: 981px) {
+    main {
+        margin: 20px;
+        padding-bottom: 1%;
+    }
+    ul {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    img {
+        max-width: 95%;  
+        height: auto;    
+        padding: 12px;    
+    }
+    div {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    footer {
+        padding: 1%;
+    }
+}
