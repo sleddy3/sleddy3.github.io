@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+        <title>Forms</title>
+        <link rel="stylesheet" href="styles/tables.css">
+        <style>
+            form {
+                background-color: #fff4e6;
+                border: 2px dashed #f8c1b0;
+                border-radius: 15px;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 2%;
+                margin-bottom: 2%;
+                padding: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Shannon Leddy's Stubborn Lizard Quilting 🦎 ITIS 3135 Page</h1>
+            <header>
+                <div data-include="components/header.html"></div>
+            </header>
+            <h2>Forms - Whimsical Company</h2> 
+            <h3>Customer Information</h3>
+            <form action="#" method="post">
+                <div>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required size="30">
+                </div>
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="\d{10}" size="15">
+                </div>
+                <div>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required size="30">
+                </div>
+                <div>
+                    <label>Quilt Size:</label>
+                    <div>
+                        <input type="radio" id="crib" name="quilt_size" value="crib" required>
+                        <label for="crib">Crib 45x60in</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="throw" name="quilt_size" value="throw">
+                        <label for="throw">Throw 50x60in</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="twin" name="quilt_size" value="twin">
+                        <label for="twin">Twin 65x90in</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="queen" name="quilt_size" value="queen">
+                        <label for="queen">Queen 90x100in</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="king" name="quilt_size" value="king">
+                        <label for="king">King 108x100in</label>
+                    </div>
+                </div>
+                <div>
+                    <label>Preferred Color/s:</label>
+                    <div>
+                        <input type="checkbox" id="red" name="quilt_colors" value="red" required>
+                        <label for="red">Red</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="orange" name="quilt_colors" value="orange">
+                        <label for="orange">Orange</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="yellow" name="quilt_colors" value="yellow">
+                        <label for="yellow">Yellow</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="green" name="quilt_colors" value="green">
+                        <label for="green">Green</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="blue" name="quilt_colors" value="blue">
+                        <label for="blue">Blue</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="purple" name="quilt_colors" value="purple">
+                        <label for="purple">Purple</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="pink" name="quilt_colors" value="pink">
+                        <label for="pink">Pink</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="white" name="quilt_colors" value="white">
+                        <label for="white">White</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="black" name="quilt_colors" value="black">
+                        <label for="black">Black</label>
+                    </div>
+                </div>
+                <div>
+                    <label for="month">Month Needed By:</label>
+                    <select id="month" name="month" required size="1">
+                        <option value="" disabled selected>Select a month</option>
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="Jun">Jun</option>
+                        <option value="Jul">Jul</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sep">Sep</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="details">Quilt Details:</label>
+                    <input type="text" id="details" name="details" placeholder="Enter the details of your quilt">
+                </div>
+                <div>
+                    <button type="reset">Reset Form</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+            <script src="scripts/HTMLInclude.js"></script>
+        </main>
+        <footer>
+            <a class="link-bar" href="https://webpages.charlotte.edu/sleddy/stubornlizard.com/">Stuborn Lizard</a>
+            <div data-include="components/footer.html"></div>
+        </footer>
+        <script src="scripts/HTMLInclude.js"></script>
+    </body>
+</html>
