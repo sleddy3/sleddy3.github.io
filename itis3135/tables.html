@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+        <title>HTML Tables</title>
+        <link rel="stylesheet" href="styles/tables.css">
+    </head>
+    <body>
+        <main>
+            <h1>Shannon Leddy's Stubborn Lizard Quilting 🦎 ITIS 3135 Page</h1>
+            <header>
+                <div data-include="components/header.html"></div>
+            </header>
+            <h2>HTML Tables - Whimsical Company</h2> 
+            <h3>My Tabular Data</h3>
+            <div class="list">
+                <h3>Employee Data in Simple Table</h3>
+                <div class="listItems">
+                    <ol>
+                        <li>Becky Sue bsue@yahoo.com 20</li>
+                        <li>Sandy Sunflower sunflowersand@icloud.com 15</li>
+                        <li>Joshua Bently jpbently@gmail.com 3</li>
+                        <li>Andrew Martin martinandrew@yahoo.com 18</li>
+                        <li>Marcus Pope mpope6@gmail.com 7</li>
+                        <li>JaNa Rodriguez janar@outlook.com 21</li>
+                        <li>Abby Hernandez Mendez abbyhmendez@yahoo.com 12</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="badTable">
+                <h3>Employee Data in Simple Table</h3>
+                <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Years Employed</th>
+                </tr>
+                <tr>
+                    <td>Becky Sue</td>
+                    <td>bsue@yahoo.com</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Sandy Sunflower</td>
+                    <td>sunflowersand@icloud.com</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Joshua Bently</td>
+                    <td>jpbently@gmail.com</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Andrew Martin</td>
+                    <td>martinandrew@yahoo.com</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>Marcus Pope</td>
+                    <td>mpope6@gmail.com</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>JaNa Rodriguez</td>
+                    <td>janar@outlook.com</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>Abby Hernandez Mendez</td>
+                    <td>abbyhmendez@yahoo.com</td>
+                    <td>12</td>
+                </tr>
+                </table>
+            </div>
+            <div class="goodTable">
+                <h3>Employee Data in Complex Table</h3>
+                <figure class="table">
+                    <figcaption>Employee Information</figcaption>
+                    <table>
+                        <tr>
+                            <th id="cat">Category</th>
+                            <th id="name">Name</th>
+                            <th id="email">Email</th>
+                            <th id="years">Years of Service</th>
+                            <th id="salary">Monthly Salary</th>
+                        </tr>
+                        <tr>
+                            <th headers="cat" rowspan="3" id="market">Marketing</th>
+                            <td headers="market name">Becky Sue</td>
+                            <td headers="market email">bsue@yahoo.com</td>
+                            <td headers="market years">20</td>
+                            <td headers="market salary">$4,000</td>
+                        </tr>
+                        <tr>
+                            <td headers="market name">Sandy Sunflower</td>
+                            <td headers="market email">sunflowersand@icloud.com</td>
+                            <td headers="market years">15</td>
+                            <td headers="market salary">$3,800</td>
+                        </tr>
+                        <tr>
+                            <td headers="market name">Marcus Pope</td>
+                            <td headers="market email">mpope6@gmail.com</td>
+                            <td headers="market years">7</td>
+                            <td headers="market salary">$4,500</td>
+                        </tr>
+                        <tr>
+                            <th headers="cat" rowspan="3" id="hr">Human Resources</th>
+                            <td headers="hr name">Andrew Martin</td>
+                            <td headers="hr email">martinandrew@yahoo.com</td>
+                            <td headers="hr years">18</td>
+                            <td headers="hr salary">$5,200</td>
+                        </tr>
+                        <tr>
+                            <td headers="hr name">Abby Hernandez Mendez</td>
+                            <td headers="hr email">abbyhmendez@yahoo.com</td>
+                            <td headers="hr years">12</td>
+                            <td headers="hr salary">$3,700</td>
+                        </tr>
+                        <tr>
+                            <td headers="hr name">JaNa Rodriguez</td>
+                            <td headers="hr email">janar@outlook.com</td>
+                            <td headers="hr years">21</td>
+                            <td headers="hr salary">$6,000</td>
+                        </tr>
+                        <tr>
+                            <th headers="cat" rowspan="1" id="it">IT & Development</th>
+                            <td headers="it name">Joshua Bently</td>
+                            <td headers="it email">jpbently@gmail.com</td>
+                            <td headers="it years">3</td>
+                            <td headers="it salary">$3,200</td>
+                        </tr>
+                        <tr>
+                            <th id="total" colspan="3">Total Years of Service</th>
+                            <td headers="total" colspan="1">96</td>
+                            <td headers="total" colspan="1">$30,400</td>
+                        </tr>
+                    </table>
+                </figure>
+            </div>
+            <script src="scripts/HTMLInclude.js"></script>
+        </main>
+        <footer>
+            <a class="link-bar" href="https://webpages.charlotte.edu/sleddy/stubornlizard.com/">Stuborn Lizard</a>
+            <div data-include="components/footer.html"></div>
+        </footer>
+        <script src="scripts/HTMLInclude.js"></script>
+    </body>
+</html>
