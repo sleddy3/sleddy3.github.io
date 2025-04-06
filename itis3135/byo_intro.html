@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+        <title>Website Form</title>
+        <link rel="stylesheet" href="styles/tables.css">
+    </head>
+    <body>
+        <h1>Shannon Leddy's Stubborn Lizard Quilting 🦎 ITIS 3135 Page</h1>
+        <header>
+            <div data-include="components/header.html"></div>
+        </header>
+        <main>
+            <h2>Build Your Own Page!</h2>
+            <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+            <form id="webForm">
+                <div>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Shannon Leddy" required>
+                </div>
+                <div>
+                    <label for="mascot">Mascot:</label>
+                    <input type="text" id="mascot" name="mascot" placeholder="Mascot" required>
+                </div>
+                <div>
+                    <label for="image">Image (PNG/JPG):</label>
+                    <input type="file" id="image" name="image" accept=".png, .jpg, .jpeg">
+                </div>
+                <div>
+                    <label for="image-caption">Image Caption:</label>
+                    <input type="text" id="image-caption" name="image-caption" placeholder="Picture of Me at The Beach" required>
+                </div>
+                <div>
+                    <label for="personal-background">Personal Background:</label>
+                    <input type="text" id="personal-background" name="personal-background" placeholder="I am 20 years old. I am a sophmore in college. I am majoring in computer science with a concentration in cyber security" required>
+                </div>
+                <div>
+                    <label for="professional-background">Professional Background:</label>
+                    <input type="text" id="professional-background" name="professional-background" placeholder="None in Computer Science" required>
+                </div>
+                <div>
+                    <label for="academic-background">Academic Background:</label>
+                    <input type="text" id="academic-background" name="academic-background" placeholder="Graduated highschool. Learned python in highschool. Learned java in highschool and college. Learned the basic data structures" required>
+                </div>
+                <div>
+                    <label for="web-develop-background">Background in Web Development:</label>
+                    <input type="text" id="web-develop-background" name="web-develop-background" placeholder="None really" required>
+                </div>
+                <div>
+                    <label for="primary-computer">Primary Computer Platform:</label>
+                    <input type="text" id="primary-computer" name="primary-computer" placeholder="Windows 11" required>
+                </div>
+                <div>
+                    <label for="current-course">Course Currently Taking:</label>
+                    <div id="coursesContainer">
+                        <input type="text" id="current-course" name="current-courses[]" placeholder="Enter a course" required>
+                    </div>
+                    <button type="button" id="addCourseButton">Add Another Course</button>
+                </div>
+                <div>
+                    <label for="funny-thing">Funny Thing:</label>
+                    <input type="text" id="funny-thing" name="funny-thing" placeholder="When it snowed for the first time in forever when I was about 10, I tried to go play in the snow in my bathing suit not realizing snow is cold.">
+                </div>
+                <div>
+                    <label for="anything-else">Anything Else:</label>
+                    <input type="text" id="anything-else" name="anything-else" placeholder="I love chicken!">
+                </div>
+                <div>
+                    <label for="agree">"I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available."</label>
+                    <input type="checkbox" id="agree" name="agree" value="agree" required><label>Agree</label>
+                </div>
+                <input type="submit" id="submit" value="submit">
+                <input type="reset" id="reset" value="reset">
+            </form>
+        </main>
+        <footer>
+            <div data-include="components/footer.html"></div>
+        </footer>
+        <script src="scripts/HTMLInclude.js"></script>
+        <script src="scripts/survey.js"></script>
+    </body>
+</html>
