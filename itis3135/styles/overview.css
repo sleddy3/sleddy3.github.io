@@ -1,0 +1,88 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    font-size: 1.8rem;
+    margin: 20px 0 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #BF40BF;
+    color: #BF40BF;
+}
+
+p {
+    margin: 10px 0;
+}
+
+strong {
+    font-weight: bold;
+    color: #444;
+}
+
+figure {
+    margin: 20px 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+figcaption {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.mainPages {
+    background-color: #eef6fa;
+    padding: 20px;
+    border-left: 5px solid #BF40BF;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.mainPages > header {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #702963;
+}
+
+.subPages {
+    background-color: #f3fafd;
+    padding: 15px;
+    margin-top: 15px;
+    border-left: 4px solid #e8b6e8;
+    border-radius: 4px;
+}
+
+.subPages > header {
+    font-size: 1.2rem;
+    color: #BF40BF;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 40px;
+}
