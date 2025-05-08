@@ -1,23 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Python Wizard!</title>
-        <link rel="stylesheet" href="styles/default.css">
-        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <header>
-            <h1>Python Wizard!</h1>
-            <h2><u>Data Types</u></h2>
-            <nav class="pages"><p>🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/data.html">Back</a></p></nav>
-        </header>
-        <main>
-        </main>
-        <footer>
-            <div data-include="components/footer.html"></div>
-            <script src="scripts/HTMLInclude.js"></script>
-        </footer>
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Wizard!</title>
+    <link rel="stylesheet" href="styles/default.css" />
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>🧙‍♂️ Python Wizard!</h1>
+        <h2><u>Data Types</u></h2>
+        <nav class="pages">
+            <p>🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/data.html">Back</a></p>
+        </nav>
+    </header>
+    <main>
+        <section class="lesson">
+            <h3>📘 Lesson: Understanding Python Data Types</h3>
+            <p>
+                Data types are the <strong>foundation of any programming language</strong> they tell Python what kind of data it’s working with and how to handle it.
+                In Python, every piece of data is an object, and every object has a type.
+            </p>
+            <p><strong>Python is dynamically typed</strong>, meaning:</p>
+            <ul>
+                <li>You don’t need to declare a variable’s type ahead of time.</li>
+                <li>The type is determined when the program runs.</li>
+            </ul>
+            <pre>
+                <code>
+                    age = 5         # int
+                    pi = 3.14       # float
+                    name = "Alice"  # str
+                </code>
+            </pre>
+            <hr/>
+            <h4>Core Data Types</h4>
+            <h5><code>int</code> – Integer</h5>
+            <p>Whole numbers like <code>10</code>, <code>-3</code>, or <code>0</code>.</p>
+            <pre>
+                <code>
+                    score = 100
+                    year = 2025
+                </code>
+            </pre>
+            <h5><code>float</code> – Floating Point Number</h5>
+            <p>Numbers with decimal points.</p>
+            <pre>
+                <code>
+                    price = 19.99
+                    temperature = -3.5
+                </code>
+            </pre>
+            <h5><code>str</code> – String</h5>
+            <p>Text data enclosed in quotes.</p>
+            <pre>
+                <code>
+                    message = "Hello, Python!"
+                    initial = 'A'
+                </code>
+            </pre>
+            <h5><code>bool</code> – Boolean</h5>
+            <p>True or False values used in logic.</p>
+            <pre>
+                <code>
+                    is_logged_in = True
+                    is_complete = False
+                </code>
+            </pre>
+            <hr />
+            <h4>Collection Data Types</h4>
+            <h5><code>list</code> – Ordered, Mutable Collection</h5>
+            <pre>
+                <code>
+                    colors = ["red", "green", "blue"]
+                    colors.append("yellow")
+                </code>
+            </pre>
+            <h5><code>tuple</code> – Ordered, Immutable Collection</h5>
+            <pre>
+                <code>
+                    dimensions = (1920, 1080)
+                </code>
+            </pre>
+            <h5><code>dict</code> – Dictionary (Key-Value Pairs)</h5>
+            <pre>
+                <code>
+                    person = {"name": "Bob", "age": 30}
+                    print(person["name"])
+                </code>
+            </pre>
+            <h5><code>set</code> – Unordered, Unique Items</h5>
+            <pre>
+                <code>
+                    unique_ids = {1, 2, 3, 2}
+                    print(unique_ids)  # {1, 2, 3}
+                </code>
+            </pre>
+            <hr />
+            <h4>Type Checking and Conversion</h4>
+            <pre>
+                <code>type(3.14)     # &lt;class 'float'&gt;
+                    str(42)        # "42"
+                    int("10")      # 10
+                    bool("")       # False
+                </code>
+            </pre>
+            <hr />
+            <h4>🤔 Why Data Types Matter</h4>
+            <ul>
+                <li>They prevent bugs (e.g., trying to add a string to an integer).</li>
+                <li>They make your code easier to read and understand.</li>
+                <li>They enable Python to optimize performance behind the scenes.</li>
+            </ul>
+            <hr />
+            <h4>🧪 Quick Challenge!</h4>
+            <pre>
+                <code>
+                    a = "5"
+                    b = 3
+                    print(a * b)  # What does this output?
+                </code>
+            </pre>
+            <p><strong>Answer:</strong> <code>"555"</code> — the string "5" is repeated 3 times!</p>
+            <hr />
+        </section>
+        <section class="quiz">
+            <h3>🧠 Quick Quiz: Data Types</h3>
+            <form id="quizForm">
+                <div class="question">
+                    <p>1. What data type would <code>3.14</code> be in Python?</p>
+                    <label><input type="radio" name="q1" value="int"> int</label><br />
+                    <label><input type="radio" name="q1" value="float"> float</label><br />
+                    <label><input type="radio" name="q1" value="str"> str</label>
+                </div>
+                <div class="question">
+                    <p>2. What is the correct data type for <code>"Hello World"</code>?</p>
+                    <label><input type="radio" name="q2" value="bool"> bool</label><br />
+                    <label><input type="radio" name="q2" value="str"> str</label><br />
+                    <label><input type="radio" name="q2" value="int"> int</label>
+                </div>
+                <button type="button" onclick="gradeQuiz1()">Submit Quiz</button>
+            </form>
+            <div id="quizResult" style="margin-top: 15px; font-weight: bold;"></div>
+        </section>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.js"></script>
+    </footer>
+    <script src="scripts/quiz.js"></script>
+</body>
 </html>

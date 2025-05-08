@@ -1,23 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Python Wizard!</title>
-        <link rel="stylesheet" href="styles/default.css">
-        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <header>
-            <h1>Python Wizard!</h1>
-            <h2><u>Data Types and Variables</u></h2>
-            <nav class="pages"><p>🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/">Home</a> 🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/data_one.html">Data Types</a> 🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/data_two.html">Variables</a></p></nav>
-        </header>
-        <main>
-        </main>
-        <footer>
-            <div data-include="components/footer.html"></div>
-            <script src="scripts/HTMLInclude.js"></script>
-        </footer>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Wizard!</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>🧙‍♂️ Python Wizard!</h1>
+        <h2><u>Data Types and Variables</u></h2>
+        <nav class="pages">
+            <p>🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/">Home</a> 
+            🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/data_one.html">Data Types</a> 
+            🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/data_two.html">Variables</a></p>
+        </nav>
+    </header>
+    <main>
+        <section class="lesson">
+            <h3>🔍 Quick Lesson</h3>
+            <p>In Python, <strong>variables</strong> are used to store data, and <strong>data types</strong> define what kind of data you are working with.</p>
+            <ul>
+                <li><strong>int</strong>: whole numbers, e.g., <code>x = 5</code></li>
+                <li><strong>float</strong>: decimal numbers, e.g., <code>pi = 3.14</code></li>
+                <li><strong>str</strong>: text, e.g., <code>name = "Alice"</code></li>
+                <li><strong>bool</strong>: True or False values, e.g., <code>is_on = True</code></li>
+            </ul>
+            <p>Python is dynamically typed, meaning you don’t have to declare the type—it figures it out for you!</p>
+            <p>We'll go into more detail in the upcoming sections, but make sure you understand the basics first.</p>
+        </section>
+        <section class="quiz">
+            <h3>🧠 Mini Quiz: Test Your Knowledge!</h3>
+            <form id="quizForm">
+                <div class="question">
+                    <p>1. What data type is used to store text in Python?</p>
+                    <label><input type="radio" name="q1" value="int"> int</label><br>
+                    <label><input type="radio" name="q1" value="str"> str</label><br>
+                    <label><input type="radio" name="q1" value="bool"> bool</label>
+                </div>
+                <div class="question">
+                    <p>2. Which of these is a valid variable assignment?</p>
+                    <label><input type="radio" name="q2" value="let x = 5"> let x = 5</label><br>
+                    <label><input type="radio" name="q2" value="var x = 5"> var x = 5</label><br>
+                    <label><input type="radio" name="q2" value="x = 5"> x = 5</label>
+                </div>
+                <div class="question">
+                    <p>3. What is the output of <code>type(3.14)</code> in Python?</p>
+                    <label><input type="radio" name="q3" value="int"> int</label><br>
+                    <label><input type="radio" name="q3" value="float"> float</label><br>
+                    <label><input type="radio" name="q3" value="str"> str</label>
+                </div>
+                <button type="button" onclick="gradeQuiz()">Submit Quiz</button>
+            </form>
+            <div id="quizResult" style="margin-top: 15px; font-weight: bold;"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.js"></script>
+    </footer>
+    <script src="scripts/quiz.js"></script>
+</body>
 </html>
+

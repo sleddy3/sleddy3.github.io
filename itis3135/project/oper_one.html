@@ -1,23 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Python Wizard!</title>
-        <link rel="stylesheet" href="styles/default.css">
-        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <header>
-            <h1>Python Wizard!</h1>
-            <h2><u>Arithmetic</u></h2>
-            <nav class="pages"><p>🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/oper.html">Back</a></p></nav>
-        </header>
-        <main>
-        </main>
-        <footer>
-            <div data-include="components/footer.html"></div>
-            <script src="scripts/HTMLInclude.js"></script>
-        </footer>
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Python Wizard!</title>
+    <link rel="stylesheet" href="styles/default.css"/>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>🧙‍♂️ Python Wizard!</h1>
+        <h2><u>Arithmetic Operators</u></h2>
+        <nav class="pages">
+            <p>
+                🧙‍♂️ <a href="oper.html">Back</a>
+            </p>
+        </nav>
+    </header>
+    <main>
+        <section class="lesson">
+            <h3>🔍 Deep Dive: Arithmetic Operators in Python</h3>
+            <p>Arithmetic operators are used to perform mathematical operations between numeric values. Python supports several arithmetic operators that you’ll use regularly.</p>
+            <hr />
+            <h4>List of Arithmetic Operators</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Name</th>
+                        <th>Example</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>+</code></td>
+                        <td>Addition</td>
+                        <td><code>3 + 2</code></td>
+                        <td><code>5</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>-</code></td>
+                        <td>Subtraction</td>
+                        <td><code>5 - 2</code></td>
+                        <td><code>3</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>*</code></td>
+                        <td>Multiplication</td>
+                        <td><code>4 * 2</code></td>
+                        <td><code>8</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>/</code></td>
+                        <td>Division</td>
+                        <td><code>8 / 4</code></td>
+                        <td><code>2.0</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>//</code></td>
+                        <td>Floor Division</td>
+                        <td><code>7 // 2</code></td>
+                        <td><code>3</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>%</code></td>
+                        <td>Modulus</td>
+                        <td><code>7 % 3</code></td>
+                        <td><code>1</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>**</code></td>
+                        <td>Exponentiation</td>
+                        <td><code>2 ** 3</code></td>
+                        <td><code>8</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr />
+            <h4>Examples in Python</h4>
+            <pre><code>
+                a = 10
+                b = 3
+
+                print(a + b)   # 13
+                print(a - b)   # 7
+                print(a * b)   # 30
+                print(a / b)   # 3.333...
+                print(a // b)  # 3
+                print(a % b)   # 1
+                print(a ** b)  # 1000
+            </code></pre>
+            <hr />
+            <h4>Order of Operations (PEMDAS)</h4>
+            <p>Python follows the PEMDAS order for evaluating expressions:</p>
+            <ul>
+                <li><strong>P</strong>arentheses</li>
+                <li><strong>E</strong>xponents</li>
+                <li><strong>M</strong>ultiplication and <strong>D</strong>ivision (from left to right)</li>
+                <li><strong>A</strong>ddition and <strong>S</strong>ubtraction (from left to right)</li>
+            </ul>
+            <pre><code>
+                result = 5 + 2 * 3    # result = 11
+                result = (5 + 2) * 3  # result = 21
+            </code></pre>
+            <hr />
+        </section>
+        <section class="quiz">
+            <h3>🧠 Quiz Yourself!</h3>
+            <form id="quizForm">
+                <div class="question">
+                    <p>1. What does <code>10 % 4</code> return?</p>
+                    <label><input type="radio" name="q1" value="2"> 2</label><br>
+                    <label><input type="radio" name="q1" value="0"> 0</label><br>
+                    <label><input type="radio" name="q1" value="6"> 6</label>
+                </div>
+                <div class="question">
+                    <p>2. What will <code>2 ** 3</code> evaluate to?</p>
+                    <label><input type="radio" name="q2" value="6"> 6</label><br>
+                    <label><input type="radio" name="q2" value="8"> 8</label><br>
+                    <label><input type="radio" name="q2" value="9"> 9</label>
+                </div>
+                <div class="question">
+                    <p>3. Which operator performs modulus?</p>
+                    <label><input type="radio" name="q3" value="/"> /</label><br>
+                    <label><input type="radio" name="q3" value="//"> //</label><br>
+                    <label><input type="radio" name="q3" value="%"> %</label>
+                </div>
+                <button type="button" onclick="operatorsQuiz1()">Submit Quiz</button>
+            </form>
+            <div id="quizResult" style="margin-top: 15px; font-weight: bold;"></div>
+        </section>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.js"></script>
+    </footer>
+    <script src="scripts/quiz.js"></script>
+</body>
 </html>
+

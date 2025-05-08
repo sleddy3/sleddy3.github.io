@@ -1,23 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Python Wizard!</title>
-        <link rel="stylesheet" href="styles/default.css">
-        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <header>
-            <h1>Python Wizard!</h1>
-            <h2><u>Comparison</u></h2>
-            <nav class="pages"><p>🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/oper.html">Back</a></p></nav>
-        </header>
-        <main>
-        </main>
-        <footer>
-            <div data-include="components/footer.html"></div>
-            <script src="scripts/HTMLInclude.js"></script>
-        </footer>
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Python Wizard!</title>
+    <link rel="stylesheet" href="styles/default.css"/>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>🧙‍♂️ Python Wizard!</h1>
+        <h2><u>Comparison Operators</u></h2>
+        <nav class="pages">
+            <p>
+                🧙‍♂️ <a href="oper.html">Back</a>
+            </p>
+        </nav>
+    </header>
+    <main>
+        <section class="lesson">
+            <h3>🔍 Deep Dive: Comparison Operators in Python</h3>
+            <p>Comparison operators are used to compare two values. The result of a comparison operation is always a Boolean value: either <code>True</code> or <code>False</code>.</p>
+            <hr />
+            <h4>List of Comparison Operators</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>==</code></td>
+                        <td>Equal to</td>
+                        <td><code>5 == 5</code></td>
+                        <td><code>True</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>!=</code></td>
+                        <td>Not equal to</td>
+                        <td><code>5 != 3</code></td>
+                        <td><code>True</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&gt;</code></td>
+                        <td>Greater than</td>
+                        <td><code>5 > 2</code></td>
+                        <td><code>True</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;</code></td>
+                        <td>Less than</td>
+                        <td><code>3 &lt; 5</code></td>
+                        <td><code>True</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&gt;=</code></td>
+                        <td>Greater than or equal to</td>
+                        <td><code>5 >= 5</code></td>
+                        <td><code>True</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;=</code></td>
+                        <td>Less than or equal to</td>
+                        <td><code>3 &lt;= 4</code></td>
+                        <td><code>True</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr />
+            <h4>Examples in Python</h4>
+            <pre><code>
+                a = 10
+                b = 20
+
+                print(a == b)   # False
+                print(a != b)   # True
+                print(a &lt; b)    # True
+                print(a > b)    # False
+                print(a &lt;= b)   # True
+                print(a >= b)   # False
+            </code></pre>
+            <hr />
+            <h4>Using Comparisons in Conditionals</h4>
+            <p>Comparison operators are often used in <code>if</code> statements to control program flow:</p>
+            <pre><code>
+                age = 18
+
+                if age >= 18:
+                    print("You're an adult!")
+                else:
+                    print("You're underage.")
+            </code></pre>
+            <hr />
+        </section>
+        <section class="quiz">
+            <h3>🧠 Quiz Yourself!</h3>
+            <form id="quizForm">
+                <div class="question">
+                    <p>1. What does <code>4 != 4</code> evaluate to?</p>
+                    <label><input type="radio" name="q1" value="True"> True</label><br>
+                    <label><input type="radio" name="q1" value="False"> False</label>
+                </div>
+                <div class="question">
+                    <p>2. Which operator checks if two values are equal?</p>
+                    <label><input type="radio" name="q2" value="=="> ==</label><br>
+                    <label><input type="radio" name="q2" value="!="> !=</label><br>
+                    <label><input type="radio" name="q2" value="="> =</label>
+                </div>
+                <div class="question">
+                    <p>3. What is the result of <code>7 &lt;= 5</code>?</p>
+                    <label><input type="radio" name="q3" value="True"> True</label><br>
+                    <label><input type="radio" name="q3" value="False"> False</label>
+                </div>
+                <button type="button" onclick="operatorsQuiz2()">Submit Quiz</button>
+            </form>
+            <div id="quizResult" style="margin-top: 15px; font-weight: bold;"></div>
+        </section>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.js"></script>
+    </footer>
+    <script src="scripts/quiz.js"></script>
+</body>
 </html>

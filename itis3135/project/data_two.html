@@ -1,23 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Python Wizard!</title>
-        <link rel="stylesheet" href="styles/default.css">
-        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <header>
-            <h1>Python Wizard!</h1>
-            <h2><u>Variables</u></h2>
-            <nav class="pages"><p>🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/data.html">Back</a></p></nav>
-        </header>
-        <main>
-        </main>
-        <footer>
-            <div data-include="components/footer.html"></div>
-            <script src="scripts/HTMLInclude.js"></script>
-        </footer>
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Python Wizard!</title>
+    <link rel="stylesheet" href="styles/default.css" />
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>🧙‍♂️ Python Wizard!</h1>
+        <h2><u>Variables</u></h2>
+        <nav class="pages">
+            <p>🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/data.html">Back</a></p>
+        </nav>
+    </header>
+    <main>
+        <section class="lesson">
+            <h3>🔍 Quick Lesson</h3>
+            <p><strong>Variables</strong> are essential in Python as they store data that can be used and manipulated throughout your program. A variable essentially acts as a container for data. Here's everything you need to know:</p>
+            <hr />
+            <h4>What is a Variable?</h4>
+            <p>A <strong>variable</strong> in Python is a symbolic name that refers to a memory location where a value is stored. You can assign any kind of value to a variable, such as numbers, strings, or even lists.</p>
+            <pre>
+                <code>age = 30</code>
+            </pre>
+            <p>In this example, <code>age</code> is the variable name, and <code>30</code> is the value stored in that variable. Python doesn’t require you to declare the type of a variable before assigning it a value (this is known as dynamic typing).</p>
+            <hr />
+            <h4>Variable Assignment</h4>
+            <p>Variables are assigned values using the <code>=</code> operator:</p>
+            <pre>
+                <code>x = 5</code>
+            </pre>
+            <p>The above example assigns the integer value <code>5</code> to the variable <code>x</code>.</p>
+            <hr />
+            <h4>Python Variable Data Types</h4>
+            <p>Python supports several data types for variables. Here are the most common ones:</p>
+            <ul>
+                <li><strong>int</strong>: Whole numbers, e.g., <code>age = 25</code></li>
+                <li><strong>float</strong>: Decimal numbers, e.g., <code>pi = 3.14</code></li>
+                <li><strong>str</strong>: Strings, or text, e.g., <code>name = "Alice"</code></li>
+                <li><strong>bool</strong>: Boolean values, e.g., <code>is_active = True</code></li>
+            </ul>
+            <p>In Python, the type of data is determined by the value assigned to a variable, and Python automatically detects the type. This is why Python is considered a dynamically typed language.</p>
+            <hr />
+            <h4>Variable Naming Rules</h4>
+            <p>When naming a variable in Python, there are certain rules and best practices to follow:</p>
+            <ul>
+                <li><strong>Can start with a letter or underscore (_)</strong> but not with a number.</li>
+                <li><strong>Can contain letters, numbers, and underscores</strong>, but not spaces or special characters.</li>
+                <li><strong>Is case-sensitive</strong>: <code>myVar</code> and <code>myvar</code> are different variables.</li>
+                <li><strong>Should be descriptive</strong>: Use meaningful names like <code>user_name</code> or <code>total_price</code>.</li>
+            </ul>
+            <p>Examples of valid variable names include <code>total_count</code> and <code>is_available</code>. An example of an invalid variable name would be <code>2ndVar</code> because it starts with a number.</p>
+            <hr />
+            <h4>Reassigning Variables</h4>
+            <p>In Python, variables can be reassigned to new values at any time. The variable’s type can also change dynamically based on the value assigned to it:</p>
+            <pre>
+                <code>
+                    number = 5    # Integer
+                    number = "Hello"   # String
+                    number = 3.14      # Float
+                </code>
+            </pre>
+            <p>The variable <code>number</code> is initially assigned an integer, then a string, and finally a float. This shows how Python’s dynamic typing allows for flexible variable handling.</p>
+            <hr />
+            <h4>Best Practices for Variable Naming</h4>
+            <p>Here are some tips for effective variable naming in Python:</p>
+            <ul>
+                <li><strong>Be descriptive</strong>: Avoid vague names like <code>x</code> or <code>var1</code>. Instead, use names that describe the data stored in the variable, such as <code>user_name</code> or <code>total_cost</code>.</li>
+                <li><strong>Avoid reserved keywords</strong>: Don't use Python's reserved words (such as <code>def</code>, <code>class</code>, etc.) as variable names.</li>
+                <li><strong>Use underscores for multi word names</strong> (snake_case) for readability, e.g., <code>total_price</code>, instead of <code>totalPrice</code> (camelCase).</li>
+            </ul>
+            <hr />
+            <h4>Variable Scope</h4>
+            <p>In Python, the scope of a variable refers to the area of the program where the variable is accessible:</p>
+            <ul>
+                <li><strong>Global scope</strong>: A variable defined outside of functions can be accessed throughout the program.</li>
+                <li><strong>Local scope</strong>: A variable defined inside a function is only accessible within that function.</li>
+            </ul>
+            <p>For example:</p>
+            <pre>
+                <code>
+                    def my_function():
+                    local_var = 10
+                    print(local_var)
+                    my_function()  # Works fine
+                    print(local_var)  # This will raise an error because local_var is not accessible outside the function.
+                </code>
+            </pre>
+            <hr />
+        </section>
+        <section class="quiz">
+            <h3>🧠 Mini Quiz: Test Your Knowledge on Variables</h3>
+            <form id="quizForm">
+                <div class="question">
+                    <p>1. How do you assign the value <code>5</code> to a variable <code>x</code> in Python?</p>
+                    <label><input type="radio" name="q1" value="x = 5"> x = 5</label><br>
+                    <label><input type="radio" name="q1" value="int x = 5"> int x = 5</label><br>
+                    <label><input type="radio" name="q1" value="x := 5"> x := 5</label>
+                </div>
+                <div class="question">
+                    <p>2. Which of the following is a valid variable name in Python?</p>
+                    <label><input type="radio" name="q2" value="2ndVar"> 2ndVar</label><br>
+                    <label><input type="radio" name="q2" value="var-name"> var-name</label><br>
+                    <label><input type="radio" name="q2" value="user_name"> user_name</label>
+                </div>
+                <div class="question">
+                    <p>3. What will be the output of <code>print(type(42))</code>?</p>
+                    <label><input type="radio" name="q3" value="int"> int</label><br>
+                    <label><input type="radio" name="q3" value="str"> str</label><br>
+                    <label><input type="radio" name="q3" value="float"> float</label>
+                </div>
+                <button type="button" onclick="gradeQuiz2()">Submit Quiz</button>
+            </form>
+            <div id="quizResult" style="margin-top: 15px; font-weight: bold;"></div>
+        </section>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.js"></script>
+    </footer>
+    <script src="scripts/quiz.js"></script>
+</body>
 </html>
