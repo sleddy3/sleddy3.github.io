@@ -1,23 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Python Wizard!</title>
-        <link rel="stylesheet" href="styles/default.css">
-        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <header>
-            <h1>Python Wizard!</h1>
-            <h2><u>Selection</u></h2>
-            <nav class="pages"><p>🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/control.html">Back</a></p></nav>
-        </header>
-        <main>
-        </main>
-        <footer>
-            <div data-include="components/footer.html"></div>
-            <script src="scripts/HTMLInclude.js"></script>
-        </footer>
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Python Wizard!</title>
+    <link rel="stylesheet" href="styles/default.css" />
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>🧙‍♂️ Python Wizard!</h1>
+        <h2><u>Selection</u></h2>
+        <nav class="pages">
+            <p>🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/control.html">Back</a></p>
+        </nav>
+    </header>
+    <main>
+        <section class="lesson">
+            <h3>🔍 Quick Lesson</h3>
+            <p><strong>Selection</strong> in Python allows your programs to make decisions and execute certain code only when specific conditions are met. This is achieved using conditional statements like <code>if</code>, <code>elif</code>, and <code>else</code>.</p>
+            <hr />
+            <h4>What is Selection?</h4>
+            <p>Selection, also known as conditional execution, enables a program to choose different paths based on certain conditions. This is fundamental in programming, allowing your software to respond intelligently to inputs and situations.</p>
+            <hr />
+            <h4>The <code>if</code> Statement</h4>
+            <p>The simplest form of selection is the <code>if</code> statement. It executes a block of code only if a specified condition is <code>True</code>.</p>
+            <pre><code>
+                age = 18
+                if age >= 18:
+                    print("You are an adult.")
+            </code></pre>
+            <p>Here, the message will be printed only if <code>age</code> is 18 or more.</p>
+            <hr />
+            <h4>The <code>else</code> Clause</h4>
+            <p>An <code>else</code> clause can be added to handle what happens when the condition is not met.</p>
+            <pre><code>
+                age = 16
+                if age >= 18:
+                    print("You are an adult.")
+                else:
+                    print("You are a minor.")
+            </code></pre>
+            <hr />
+            <h4>The <code>elif</code> Clause</h4>
+            <p>The <code>elif</code> (short for "else if") clause allows checking multiple conditions sequentially.</p>
+            <pre><code>
+                grade = 85
+                if grade >= 90:
+                    print("Grade: A")
+                elif grade >= 80:
+                    print("Grade: B")
+                elif grade >= 70:
+                    print("Grade: C")
+                else:
+                    print("Grade: F")
+            </code></pre>
+            <p>This evaluates from top to bottom and stops at the first true condition.</p>
+            <hr />
+            <h4>Comparison Operators</h4>
+            <p>Comparison operators are used to form conditions. Common operators include:</p>
+            <ul>
+                <li><code>==</code>: Equal to</li>
+                <li><code>!=</code>: Not equal to</li>
+                <li><code>&gt;</code>: Greater than</li>
+                <li><code>&lt;</code>: Less than</li>
+                <li><code>&gt;=</code>: Greater than or equal to</li>
+                <li><code>&lt;=</code>: Less than or equal to</li>
+            </ul>
+            <hr />
+            <h4>Logical Operators</h4>
+            <p>Combine multiple conditions using logical operators:</p>
+            <ul>
+                <li><code>and</code>: True if both conditions are true</li>
+                <li><code>or</code>: True if at least one condition is true</li>
+                <li><code>not</code>: Inverts the truth value</li>
+            </ul>
+            <pre><code>
+                age = 25
+                if age > 18 and age &lt; 65:
+                    print("You are of working age.")
+            </code></pre>
+            <hr />
+            <h4>Nested Conditions</h4>
+            <p>You can nest <code>if</code> statements inside each other for more complex logic.</p>
+            <pre><code>
+                score = 95
+                if score >= 60:
+                    if score >= 90:
+                        print("Excellent!")
+                    else:
+                        print("Passed.")
+                else:
+                    print("Failed.")
+            </code></pre>
+            <hr />
+            <h4>Best Practices</h4>
+            <ul>
+                <li>Use indentation correctly – Python uses it to define blocks.</li>
+                <li>Keep conditions readable and avoid excessive nesting when possible.</li>
+                <li>Use boolean variables to clarify intent in complex conditions.</li>
+            </ul>
+            <hr />
+        </section>
+        <section class="quiz">
+            <h3>🧠 Mini Quiz: Test Your Knowledge on Selection</h3>
+            <form id="quizForm">
+                <div class="question">
+                    <p>1. What keyword is used to check an alternative condition after an <code>if</code> block?</p>
+                    <label><input type="radio" name="q1" value="elif"> elif</label><br>
+                    <label><input type="radio" name="q1" value="else if"> else if</label><br>
+                    <label><input type="radio" name="q1" value="elseif"> elseif</label>
+                </div>
+                <div class="question">
+                    <p>2. What will the following code output?<br><code>if 3 &gt; 2: print("Yes")</code></p>
+                    <label><input type="radio" name="q2" value="Yes"> Yes</label><br>
+                    <label><input type="radio" name="q2" value="No"> No</label><br>
+                    <label><input type="radio" name="q2" value="Error"> Error</label>
+                </div>
+                <div class="question">
+                    <p>3. Which of these is a valid condition for an <code>if</code> statement?</p>
+                    <label><input type="radio" name="q3" value="x = 5"> x = 5</label><br>
+                    <label><input type="radio" name="q3" value="x == 5"> x == 5</label><br>
+                    <label><input type="radio" name="q3" value="if x = 5"> if x = 5</label>
+                </div>
+                <button type="button" onclick="gradeQuizControlOne()">Submit Quiz</button>
+            </form>
+            <div id="quizResult" style="margin-top: 15px; font-weight: bold;"></div>
+        </section>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.js"></script>
+    </footer>
+    <script src="scripts/quiz.js"></script>
+</body>
 </html>

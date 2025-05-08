@@ -9,15 +9,90 @@
     </head>
     <body>
         <header>
-            <h1>Python Wizard!</h1>
+            <h1>🧙‍♂️ Python Wizard!</h1>
             <h2><u>Dictionaries</u></h2>
-            <nav class="pages"><p>🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/struct.html">Back</a></p></nav>
+            <nav class="pages">
+                <p>🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/struct.html">Back</a></p>
+            </nav>
         </header>
         <main>
+            <section class="lesson">
+                <h3>🔍 Quick Lesson</h3>
+                <p>A <strong>dictionary</strong> in Python is like a magic spellbook – each spell (key) has a matching incantation (value). Dictionaries let you store data in key-value pairs, making data easy to look up.</p>
+                <hr />
+                <h4>1. Creating a Dictionary</h4>
+                <pre><code>
+                    wizard = {
+                        "name": "Gandalf",
+                        "age": 2019,
+                        "magic_type": "White"
+                    }
+                </code></pre>
+                <p>Here, <code>"name"</code>, <code>"age"</code>, and <code>"magic_type"</code> are keys, and their associated values are "Gandalf", 2019, and "White".</p>
+                <hr />
+                <h4>2. Accessing Values</h4>
+                <pre><code>print(wizard["name"])</code></pre>
+                <p>This will output <code>Gandalf</code>. You can access values using the key inside square brackets.</p>
+                <hr />
+                <h4>3. Adding & Modifying Values</h4>
+                <pre><code>
+                    wizard["staff"] = "Oakwood"
+                    wizard["age"] = 2020
+                </code></pre>
+                <p>You can add new key-value pairs or update existing ones just by assignment.</p>
+                <hr />
+                <h4>4. Removing Items</h4>
+                <pre><code>del wizard["magic_type"]</code></pre>
+                <p>This will remove the key <code>"magic_type"</code> from the dictionary.</p>
+                <hr />
+                <h4>5. Useful Dictionary Methods</h4>
+                <ul>
+                    <li><code>dict.keys()</code> – Returns all keys</li>
+                    <li><code>dict.values()</code> – Returns all values</li>
+                    <li><code>dict.items()</code> – Returns all key-value pairs</li>
+                    <li><code>dict.get(key)</code> – Safely get a value without error if the key doesn’t exist</li>
+                </ul>
+                <pre><code>print(wizard.get("robe", "Not found"))</code></pre>
+                <p>This prints "Not found" if "robe" isn't in the dictionary.</p>
+                <hr />
+                <h4>6. Looping Through Dictionaries</h4>
+                <pre><code>
+                    for key, value in wizard.items():
+                        print(f"{key}: {value}")
+                </code></pre>
+                <p>This loops through all key-value pairs in the dictionary.</p>
+                <hr />
+            </section>
+            <section class="quiz">
+                <h3>🧠 Mini Quiz: Test Your Knowledge on Dictionaries</h3>
+                <form id="quizForm">
+                    <div class="question">
+                        <p>1. What is a dictionary in Python?</p>
+                        <label><input type="radio" name="q1" value="A sequence of numbers"> A sequence of numbers</label><br>
+                        <label><input type="radio" name="q1" value="A collection of key-value pairs"> A collection of key-value pairs</label><br>
+                        <label><input type="radio" name="q1" value="A list of strings"> A list of strings</label>
+                    </div>
+                    <div class="question">
+                        <p>2. How do you access the value associated with a key in a dictionary?</p>
+                        <label><input type="radio" name="q2" value="dict.getValue('key')"> dict.getValue('key')</label><br>
+                        <label><input type="radio" name="q2" value="dict['key']"> dict['key']</label><br>
+                        <label><input type="radio" name="q2" value="dict.key"> dict.key</label>
+                    </div>
+                    <div class="question">
+                        <p>3. Which method safely gets a value without causing an error if the key doesn’t exist?</p>
+                        <label><input type="radio" name="q3" value="dict['key']"> dict['key']</label><br>
+                        <label><input type="radio" name="q3" value="dict.get('key')"> dict.get('key')</label><br>
+                        <label><input type="radio" name="q3" value="dict.lookup('key')"> dict.lookup('key')</label>
+                    </div>
+                    <button type="button" onclick="gradeQuizDicts()">Submit Quiz</button>
+                </form>
+                <div id="quizResult" style="margin-top: 15px; font-weight: bold;"></div>
+            </section>
         </main>
         <footer>
             <div data-include="components/footer.html"></div>
             <script src="scripts/HTMLInclude.js"></script>
         </footer>
+        <script src="scripts/quiz.js"></script>
     </body>
 </html>

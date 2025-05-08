@@ -14,10 +14,124 @@
             <nav class="pages"><p>🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/control.html">Back</a></p></nav>
         </header>
         <main>
+            <section class="lesson">
+                <h3>🔍 Quick Lesson</h3>
+                <p><strong>Iteration</strong> in Python refers to the process of repeatedly executing a block of code until a certain condition is met. It allows you to automate repetitive tasks and make your programs more efficient. There are several types of iteration in Python:</p>
+                <hr />
+                <h4>1. The `for` Loop</h4>
+                <p>The <code>for</code> loop is the most commonly used iteration structure in Python. It allows you to iterate over sequences such as lists, tuples, strings, or ranges.</p>
+                <pre><code>
+                    # Example of a for loop that iterates over a range of numbers
+                    for i in range(5):
+                        print(i)
+                </code></pre>
+                <p>This loop will print the numbers from 0 to 4. The <code>range(5)</code> generates numbers from 0 up to (but not including) 5.</p>
+                <hr />
+                <h4>2. The `while` Loop</h4>
+                <p>The <code>while</code> loop continues to execute a block of code as long as the specified condition is <code>True</code>.</p>
+                <pre><code>
+                    # Example of a while loop that prints numbers until a condition is met
+                    i = 0
+                    while i &lt; 5:
+                        print(i)
+                        i += 1
+                </code></pre>
+                <p>This loop will also print the numbers from 0 to 4. However, it will keep executing until the condition <code>i &lt; 5</code> is no longer true.</p>
+                <hr />
+                <h4>3. Iterating Over a List</h4>
+                <p>Lists are commonly used with the <code>for</code> loop. You can iterate over a list of items directly:</p>
+                <pre><code>
+                    # Example of iterating over a list of names
+                    names = ["Alice", "Bob", "Charlie"]
+                    for name in names:
+                        print(name)
+                </code></pre>
+                <p>This will output each name in the list one by one.</p>
+                <hr />
+                <h4>4. Break and Continue Statements</h4>
+                <p>Within a loop, you can use <code>break</code> and <code>continue</code> to control the flow:</p>
+                <ul>
+                    <li><code>break</code> stops the loop entirely.</li>
+                    <li><code>continue</code> skips the current iteration and continues with the next iteration.</li>
+                </ul>
+                <pre><code>
+                    # Example of using break and continue
+                    for i in range(5):
+                        if i == 3:
+                            break  # Exit the loop when i equals 3
+                        elif i == 2:
+                            continue  # Skip the rest of the code for i equals 2
+                        print(i)
+                </code></pre>
+                <p>This will print <code>0</code>, <code>1</code>, and <code>2</code> and then stop.</p>
+                <hr />
+                <h4>5. Nested Loops</h4>
+                <p>You can also have loops inside other loops, known as nested loops. These are useful when you need to iterate over a multi-dimensional structure like a list of lists.</p>
+                <pre><code>
+                    # Example of a nested for loop
+                        for i in range(3):
+                            for j in range(3):
+                                print(f"i={i}, j={j}")
+                </code></pre>
+                <p>This will print all combinations of <code>i</code> and <code>j</code> from 0 to 2.</p>
+                <hr />
+                <h4>6. Iteration with Dictionaries</h4>
+                <p>You can also iterate over dictionaries in Python using the <code>items()</code> method, which returns both the key and the value:</p>
+                <pre><code>
+                    # Example of iterating over a dictionary
+                    person = {"name": "Alice", "age": 25, "city": "New York"}
+                    for key, value in person.items():
+                        print(key, value)
+                </code></pre>
+                <p>This will print each key-value pair in the dictionary.</p>
+                <hr />
+                <h4>7. List Comprehensions</h4>
+                <p>List comprehensions offer a concise way to create lists while iterating. This is a one-liner replacement for most <code>for</code> loops used to create lists.</p>
+                <pre><code>
+                    # Example of a list comprehension
+                    squared_numbers = [x**2 for x in range(5)]
+                    print(squared_numbers)  # Output: [0, 1, 4, 9, 16]
+                </code></pre>
+                <p>This creates a list of the squares of numbers from 0 to 4.</p>
+                <hr />
+            </section>
+            <section class="quiz">
+                <h3>🧠 Mini Quiz: Test Your Knowledge on Iteration</h3>
+                <form id="quizForm">
+                    <div class="question">
+                        <p>1. Which loop is used to iterate over a sequence in Python?</p>
+                        <label><input type="radio" name="q1" value="for"> for</label><br>
+                        <label><input type="radio" name="q1" value="if"> if</label><br>
+                        <label><input type="radio" name="q1" value="while"> while</label>
+                    </div>
+                    <div class="question">
+                        <p>2. What does the <code>continue</code> statement do in a loop?</p>
+                        <label><input type="radio" name="q2" value="Exit the loop"> Exit the loop</label><br>
+                        <label><input type="radio" name="q2" value="Skip to the next iteration"> Skip to the next iteration</label><br>
+                        <label><input type="radio" name="q2" value="Start a new loop"> Start a new loop</label>
+                    </div>
+                    <div class="question">
+                        <p>3. What will be the output of the following code?</p>
+                        <pre>
+<code>
+numbers = [1, 2, 3]
+for num in numbers:
+    print(num)
+</code>
+                        </pre>
+                        <label><input type="radio" name="q3" value="1 2 3"> 1 2 3</label><br>
+                        <label><input type="radio" name="q3" value="1"> 1</label><br>
+                        <label><input type="radio" name="q3" value="123"> 123</label>
+                    </div>
+                    <button type="button" onclick="gradeQuizControlTwo()">Submit Quiz</button>
+                </form>
+                <div id="quizResult" style="margin-top: 15px; font-weight: bold;"></div>
+            </section>
         </main>
         <footer>
             <div data-include="components/footer.html"></div>
             <script src="scripts/HTMLInclude.js"></script>
         </footer>
+        <script src="scripts/quiz.js"></script>
     </body>
 </html>

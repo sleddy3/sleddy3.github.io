@@ -9,15 +9,108 @@
     </head>
     <body>
         <header>
-            <h1>Python Wizard!</h1>
-            <h2><u>Calling</u></h2>
-            <nav class="pages"><p>🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/funct.html">Back</a></p></nav>
+            <h1>🧙‍♂️ Python Wizard!</h1>
+            <h2><u>Calling Functions</u></h2>
+            <nav class="pages">
+                <p>🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/funct.html">Back</a></p>
+            </nav>
         </header>
         <main>
+            <section class="lesson">
+                <h3>🔍 Quick Lesson</h3>
+                <p>Once you've defined a function in Python, you need to <strong>call</strong> it in order for it to run. Calling a function executes the code inside it. It's like summoning a spell from your spellbook!</p>
+                <hr />
+                <h4>1. Calling a Simple Function</h4>
+                <pre><code>
+                    def say_hello():
+                        print("Hello, wizard!")
+
+                    say_hello()
+                </code></pre>
+                <p>The function <code>say_hello()</code> is called at the bottom, which prints the greeting.</p>
+                <hr />
+                <h4>2. Calling Functions with Arguments</h4>
+                <p>If your function requires inputs (parameters), provide them inside the parentheses when you call it:</p>
+                <pre><code>
+                    def greet(name):
+                        print(f"Hello, {name}!")
+
+                    greet("Merlin")
+                </code></pre>
+                <p>This will output: <code>Hello, Merlin!</code></p>
+                <hr />
+                <h4>3. Using Return Values</h4>
+                <p>You can call a function and capture its return value in a variable:</p>
+                <pre><code>
+                    def add(a, b):
+                        return a + b
+
+                    result = add(5, 7)
+                    print(result)  # Outputs 12
+                </code></pre>
+                <hr />
+                <h4>4. Calling Functions in Other Functions</h4>
+                <p>Functions can be called inside other functions:</p>
+                <pre><code>
+                    def add(a, b):
+                        return a + b
+
+                    def multiply_and_add(x, y, z):
+                        return x * add(y, z)
+
+                    print(multiply_and_add(2, 3, 4))  # Outputs 14
+                </code></pre>
+                <p>This calls <code>add(3, 4)</code> first (which returns 7), and then multiplies it by 2.</p>
+                <hr />
+                <h4>5. Calling Built-in Functions</h4>
+                <p>Python provides many built-in functions you can call without defining them:</p>
+                <ul>
+                    <li><code>print("Hello")</code> – displays output</li>
+                    <li><code>len("magic")</code> – returns the length of a string</li>
+                    <li><code>type(10)</code> – returns the data type</li>
+                </ul>
+                <hr />
+                <h4>6. Function Call Order</h4>
+                <p>You must define a function before you call it. Otherwise, Python will raise an error:</p>
+                <pre><code>
+                    say_hello()  # ❌ NameError: name 'say_hello' is not defined
+
+                    def say_hello():
+                        print("Hello")
+                </code></pre>
+                <p>Fix this by defining the function before calling it.</p>
+                <hr />
+            </section>
+            <section class="quiz">
+                <h3>🧠 Mini Quiz: Test Your Knowledge on Function Calls</h3>
+                <form id="quizForm">
+                    <div class="question">
+                        <p>1. What is the correct way to call a function named <code>magic()</code>?</p>
+                        <label><input type="radio" name="q1" value="call magic"> call magic</label><br>
+                        <label><input type="radio" name="q1" value="magic()"> magic()</label><br>
+                        <label><input type="radio" name="q1" value="run magic"> run magic</label>
+                    </div>
+                    <div class="question">
+                        <p>2. What will this print?<br><code>def shout(): print("Boom!")<br>shout()</code></p>
+                        <label><input type="radio" name="q2" value="Boom!"> Boom!</label><br>
+                        <label><input type="radio" name="q2" value="shout"> shout</label><br>
+                        <label><input type="radio" name="q2" value="Nothing"> Nothing</label>
+                    </div>
+                    <div class="question">
+                        <p>3. What happens if you try to call a function before defining it?</p>
+                        <label><input type="radio" name="q3" value="It works fine"> It works fine</label><br>
+                        <label><input type="radio" name="q3" value="Python ignores the call"> Python ignores the call</label><br>
+                        <label><input type="radio" name="q3" value="You get an error"> You get an error</label>
+                    </div>
+                    <button type="button" onclick="gradeQuizCalling()">Submit Quiz</button>
+                </form>
+                <div id="quizResult" style="margin-top: 15px; font-weight: bold;"></div>
+            </section>
         </main>
         <footer>
             <div data-include="components/footer.html"></div>
             <script src="scripts/HTMLInclude.js"></script>
         </footer>
+        <script src="scripts/quiz.js"></script>
     </body>
 </html>

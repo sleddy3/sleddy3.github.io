@@ -9,15 +9,100 @@
     </head>
     <body>
         <header>
-            <h1>Python Wizard!</h1>
-            <h2><u>Defining</u></h2>
-            <nav class="pages"><p>🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/funct.html">Back</a></p></nav>
+            <h1>🧙‍♂️ Python Wizard!</h1>
+            <h2><u>Defining Functions</u></h2>
+            <nav class="pages">
+                <p>🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/funct.html">Back</a></p>
+            </nav>
         </header>
         <main>
+            <section class="lesson">
+                <h3>🔍 Quick Lesson</h3>
+                <p>In Python, <strong>functions</strong> are blocks of reusable code that perform a specific task. They help make your programs modular, organized, and easier to understand and maintain.</p>
+                <hr />
+                <h4>1. Defining a Function</h4>
+                <p>Use the <code>def</code> keyword to define a function. Here's the basic syntax:</p>
+                <pre><code>
+                    def greet():
+                        print("Hello, wizard!")
+                </code></pre>
+                <p>Calling <code>greet()</code> will output: <code>Hello, wizard!</code></p>
+                <hr />
+                <h4>2. Function Parameters</h4>
+                <p>Functions can accept inputs called <strong>parameters</strong>. These allow you to pass data into your function:</p>
+                <pre><code>
+                    def greet(name):
+                        print(f"Hello, {name}!")
+                </code></pre>
+                <p>Calling <code>greet("Merlin")</code> will output: <code>Hello, Merlin!</code></p>
+                <hr />
+                <h4>3. Returning Values</h4>
+                <p>Functions can also return values using the <code>return</code> keyword:</p>
+                <pre><code>
+                    def add(a, b):
+                        return a + b
+                </code></pre>
+                <p><code>add(3, 5)</code> will return <code>8</code>. You can store the result in a variable for later use.</p>
+                <hr />
+                <h4>4. Default Parameters</h4>
+                <p>Parameters can have default values, which are used if no value is provided during the function call:</p>
+                <pre><code>
+                    def greet(name="wizard"):
+                        print(f"Hello, {name}!")
+                </code></pre>
+                <p><code>greet()</code> will print <code>Hello, wizard!</code>. <code>greet("Gandalf")</code> will print <code>Hello, Gandalf!</code>.</p>
+                <hr />
+                <h4>5. Scope of Variables</h4>
+                <p>Variables defined inside a function are local to that function. They cannot be accessed outside of it:</p>
+                <pre><code>
+                    def cast_spell():
+                        spell = "Fireball"
+                        print(spell)
+
+                    cast_spell()
+                        print(spell)  # This will cause an error!
+                </code></pre>
+                <p>The last line will raise a <code>NameError</code> because <code>spell</code> is not defined outside the function.</p>
+                <hr />
+                <h4>6. The <code>pass</code> Statement</h4>
+                <p>If you're still planning your function and want it to do nothing (for now), use the <code>pass</code> statement:</p>
+                <pre><code>
+                    def future_function():
+                        pass
+                </code></pre>
+                <p>This keeps your code valid without executing anything inside the function body.</p>
+                <hr />
+            </section>
+            <section class="quiz">
+                <h3>🧠 Mini Quiz: Test Your Knowledge on Function Definitions</h3>
+                <form id="quizForm">
+                    <div class="question">
+                        <p>1. Which keyword is used to define a function in Python?</p>
+                        <label><input type="radio" name="q1" value="func"> func</label><br>
+                        <label><input type="radio" name="q1" value="define"> define</label><br>
+                        <label><input type="radio" name="q1" value="def"> def</label>
+                    </div>
+                    <div class="question">
+                        <p>2. What does the following function return?<br><code>def add(a, b): return a + b</code></p>
+                        <label><input type="radio" name="q2" value="Adds a and b"> Adds a and b</label><br>
+                        <label><input type="radio" name="q2" value="Prints a and b"> Prints a and b</label><br>
+                        <label><input type="radio" name="q2" value="Multiplies a and b"> Multiplies a and b</label>
+                    </div>
+                    <div class="question">
+                        <p>3. What will <code>greet()</code> print if defined as:<br><code>def greet(name="wizard"): print(f"Hello, {name}!")</code></p>
+                        <label><input type="radio" name="q3" value="Hello, name!"> Hello, name!</label><br>
+                        <label><input type="radio" name="q3" value="Hello, wizard!"> Hello, wizard!</label><br>
+                        <label><input type="radio" name="q3" value="Error"> Error</label>
+                    </div>
+                    <button type="button" onclick="gradeQuizDefining()">Submit Quiz</button>
+                </form>
+                <div id="quizResult" style="margin-top: 15px; font-weight: bold;"></div>
+            </section>
         </main>
         <footer>
             <div data-include="components/footer.html"></div>
             <script src="scripts/HTMLInclude.js"></script>
         </footer>
+        <script src="scripts/quiz.js"></script>
     </body>
 </html>

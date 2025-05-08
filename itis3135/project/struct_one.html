@@ -9,15 +9,87 @@
     </head>
     <body>
         <header>
-            <h1>Python Wizard!</h1>
+            <h1>🧙‍♂️ Python Wizard!</h1>
             <h2><u>Lists</u></h2>
-            <nav class="pages"><p>🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/struct.html">Back</a></p></nav>
+            <nav class="pages">
+                <p>🧙‍♂️ <a href="https://webpages.charlotte.edu/sleddy/itis3135/project/struct.html">Back</a></p>
+            </nav>
         </header>
         <main>
+            <section class="lesson">
+                <h3>🔍 Quick Lesson</h3>
+                <p><strong>Lists</strong> in Python are used to store multiple items in a single variable. Think of them like magical scrolls where you can keep your potions, ingredients, or spell names in one place!</p>
+                <hr />
+                <h4>1. Creating a List</h4>
+                <pre><code>potions = ["Healing", "Invisibility", "Strength"]</code></pre>
+                <p>This creates a list called <code>potions</code> with three elements.</p>
+                <hr />
+                <h4>2. Accessing Elements</h4>
+                <p>Lists are ordered and can be indexed using numbers starting from 0:</p>
+                <pre><code>print(potions[0])  # Outputs: Healing</code></pre>
+                <p>Use negative numbers to start from the end: <code>potions[-1]</code> gives <code>Strength</code>.</p>
+                <hr />
+                <h4>3. Modifying Lists</h4>
+                <p>You can update list items by accessing their index:</p>
+                <pre><code>potions[1] = "Flying"</code></pre>
+                <p>This changes the second item from "Invisibility" to "Flying".</p>
+                <hr />
+                <h4>4. List Methods</h4>
+                <ul>
+                    <li><code>append()</code> – adds an item to the end: <code>potions.append("Mana")</code></li>
+                    <li><code>remove()</code> – removes a specific item: <code>potions.remove("Strength")</code></li>
+                    <li><code>insert()</code> – inserts an item at a specific index: <code>potions.insert(1, "Speed")</code></li>
+                    <li><code>len()</code> – returns the number of items: <code>len(potions)</code></li>
+                </ul>
+                <hr />
+                <h4>5. Looping Through a List</h4>
+                <pre><code>
+                    for potion in potions:
+                        print(potion)
+                </code></pre>
+                <p>This will print each item in the <code>potions</code> list.</p>
+                <hr />
+                <h4>6. Slicing Lists</h4>
+                <p>Use slicing to access parts of a list:</p>
+                <pre><code>potions[1:3]</code></pre>
+                <p>Returns a new list with items at index 1 and 2.</p>
+                <hr />
+                <h4>7. Nested Lists</h4>
+                <p>Lists can contain other lists (like having a scroll inside another scroll):</p>
+                <pre><code>inventory = [["Sword", "Shield"], ["Potion", "Elixir"]]</code></pre>
+                <p><code>inventory[0][1]</code> returns <code>Shield</code>.</p>
+                <hr />
+            </section>
+            <section class="quiz">
+                <h3>🧠 Mini Quiz: Test Your Knowledge on Lists</h3>
+                <form id="quizForm">
+                    <div class="question">
+                        <p>1. What is the correct way to create a list in Python?</p>
+                        <label><input type="radio" name="q1" value='["apple", "banana", "cherry"]'> ["apple", "banana", "cherry"]</label><br>
+                        <label><input type="radio" name="q1" value="list = apple, banana, cherry"> list = apple, banana, cherry</label><br>
+                        <label><input type="radio" name="q1" value="list = 'apple banana cherry'"> list = 'apple banana cherry'</label>
+                    </div>
+                    <div class="question">
+                        <p>2. What does <code>potions[-1]</code> return from <code>potions = ["Healing", "Strength", "Invisibility"]</code>?</p>
+                        <label><input type="radio" name="q2" value="Healing"> Healing</label><br>
+                        <label><input type="radio" name="q2" value="Invisibility"> Invisibility</label><br>
+                        <label><input type="radio" name="q2" value="Strength"> Strength</label>
+                    </div>
+                    <div class="question">
+                        <p>3. What does <code>len(potions)</code> return?</p>
+                        <label><input type="radio" name="q3" value="The last item"> The last item</label><br>
+                        <label><input type="radio" name="q3" value="The number of items"> The number of items</label><br>
+                        <label><input type="radio" name="q3" value="An error"> An error</label>
+                    </div>
+                    <button type="button" onclick="gradeQuizLists()">Submit Quiz</button>
+                </form>
+                <div id="quizResult" style="margin-top: 15px; font-weight: bold;"></div>
+            </section>
         </main>
         <footer>
             <div data-include="components/footer.html"></div>
             <script src="scripts/HTMLInclude.js"></script>
         </footer>
+        <script src="scripts/quiz.js"></script>
     </body>
 </html>
